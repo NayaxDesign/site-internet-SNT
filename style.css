@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #f5f1f1;
+    --grey: #C4C4C480;
+    --bg-color : #F7F7F7;
+    --grey-color : #9A9A9A;
+    --black : #111;
+}
+
+body{
+    width: 100vw;
+}
+
+.navigation {
+    margin: 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--white);
+    flex-wrap: nowrap;
+}
+
+.navigation__logo {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger {
+    padding-right: 1rem;
+}
+
+.navbar__search {
+    width: 20rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.navbar__right > .btn__default{
+    background-color: var(--primary-color);
+}
+
+.btn:hover {
+    background-color: var(--off-white);
+    border: 1px solid var(--primary-color);
+    color: var(--black);
+}
+
+.search__box {
+    width: 100%;
+    border-radius: 5px;
+    padding: .7rem .4rem;
+    outline: none;
+    border-width: 0;
+    border: 1px solid;
+    padding-left: 3rem;
+}
+
+.search__icon {
+    position: absolute;
+    padding: 0 .8rem;
+}
+
+
+
+.navbar__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar__right >.btn{
+    text-align: center;
+}
+.user__icon{
+    cursor: pointer;
+    padding: 0;
+    font-size: 1.5rem;
+    border-radius: 50px;
+}
+.user__icon:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.badge__icon {
+    font-size: 1.2rem;
+    padding-right: .2rem; 
+    padding-bottom: .3rem;
+}
+
+.badge__number {
+    bottom: 1.2rem;
+    left: 2.6rem;
+}
+
+.hero__overlay::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 31.25rem;
+    width: 100vw;
+    background-color: var(--black);
+    opacity: .7;
+    z-index: 1;
+}
+
+.hero__slider {
+    position: relative;
+    background: url(https://c0.wallpaperflare.com/preview/186/124/897/red-and-white-air-jordan-1-shoe-on-concrete-floor.jpg);
+    background-size: cover;
+    height: 31.25rem;
+    width: 100%;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, .3);
+    animation: animate 20s infinite;
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 31.25rem;
+    padding: 0 2rem;
+    position: absolute;
+    z-index: 1;
+}
+
+.hero__heading,
+.hero__subheading {
+    font-size: 3rem;
+    color: var(--white);
+}
+
+.hero__subheading {
+    font-size: 1.5rem;
+}
+
+.hero__content>.btn {
+    width: 10rem;
+    margin: .625rem 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.categories {
+    padding: 5rem 0;
+}
+
+.categories__cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 1rem auto;
+}
+
+.subheading {
+    padding: 2rem 0;
+    font-size: 2.25rem;
+}
+
+.categories__card {
+    width: 25rem;
+    height: 25rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.categories__images {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background-color: var(--grey);
+    padding: 3rem;
+    position: relative;
+}
+
+.categories__heading {
+    width: 10rem;
+    padding: 1rem 0;
+    background-color: var(--black);
+    color: var(--white);
+    position: absolute;
+    bottom: 1rem;
+    left: 7rem;
+    border-radius: 5px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: var(--grey);
+    margin: 1rem 0 0 0;
+}
+
+.footer__text {
+    padding: 1rem 0;
+}
+
+.footer__icon {
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+.icon {
+    font-size: 1.85rem;
+    padding: 0 1.2rem;
+}
+
+
+/* Hero Slider Animation */
+
+@keyframes animate {
+    30% {
+        background: url(https://c0.wallpaperflare.com/preview/833/512/948/shoes-shoe-store-rack.jpg);
+        background-size: cover;
+    }
+
+    60% {
+        background: url(https://c0.wallpaperflare.com/preview/822/951/691/pair-of-white-red-and-black-nike-air-jordan-1-shoes-on-floor.jpg);
+        background-size: cover;
+    }
+
+    100% {
+        background: url(https://i.ebayimg.com/images/g/h5wAAOSwUH1gZS5v/s-l1600.jpg);
+        background-size: cover;
+    }
+
+}
+
+
+
+
+
+/* Responsive Style */
+
+@media screen and (max-width:700px) {
+    html {
+        font-size: 12px;
+    }
+
+    .navbar__search {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 1.3rem;
+    }
+}
+
+
+
+@media screen and (max-width:400px) {
+    html {
+        font-size: 10px;
+    }
+}
